@@ -23,7 +23,7 @@ const CONFIG = {
   HEO_HERO_TITLE_LINK: 'https://neotec.us.kg',
 
   // 英雄区显示三个置顶分类
-  HEO_HERO_CATEGORY_2: { title: '基本作品', url: '/tag/基本作品' },
+  HEO_HERO_CATEGORY_1: { title: '基本作品', url: '/tag/基本作品' },
   HEO_HERO_CATEGORY_2: { title: '热门文章', url: '/tag/热门文章' },
   HEO_HERO_CATEGORY_3: { title: '实用教程', url: '/tag/实用教程' },
 
