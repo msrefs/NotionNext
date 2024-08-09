@@ -5,8 +5,8 @@ const CONFIG = {
 
   // 首页顶部通知条滚动内容，如不需要可以留空 []
   HEO_NOTICE_BAR: [
-    { title: '欢迎来到Neotec.', url: '' },
-    { title: 'Neotec.创造无限可能', url: '' }
+    { title: '欢迎来到Neotec.', url: 'https://neotec.us.kg/message' },
+    { title: 'Neotec.创造无限可能', url: 'https://neotec.us.kg/message' }
   ],
 
   // 英雄区左右侧组件颠倒位置
