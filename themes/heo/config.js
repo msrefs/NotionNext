@@ -47,7 +47,7 @@ const CONFIG = {
   HEO_INFO_CARD_ICON1: 'fas fa-user',
   HEO_INFO_CARD_URL2: 'https://github.com/msrefs',
   HEO_INFO_CARD_ICON2: 'fab fa-github',
-  HEO_INFO_CARD_URL3: 'https://neotec.us.kg',
+  HEO_INFO_CARD_URL3: 'https://neotec.us.kg/message',
   HEO_INFO_CARD_TEXT3: '了解更多',
 
   // 用户技能图标
