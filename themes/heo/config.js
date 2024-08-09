@@ -18,7 +18,7 @@ const CONFIG = {
   HEO_HERO_TITLE_1: '欢迎访问',
   HEO_HERO_TITLE_2: 'Neotec.',
   HEO_HERO_TITLE_3: 'NEOTEC.US.KG',
-  HEO_HERO_TITLE_4: '开始体验',
+  HEO_HERO_TITLE_4: '开始使用',
   HEO_HERO_TITLE_5: 'Neotec.创造无限可能',
   HEO_HERO_TITLE_LINK: 'https://neotec.us.kg',
 
@@ -43,7 +43,7 @@ const CONFIG = {
   ],
 
   // 个人资料底部按钮
-  HEO_INFO_CARD_URL1: '/about',
+  HEO_INFO_CARD_URL1: '/message',
   HEO_INFO_CARD_ICON1: 'fas fa-user',
   HEO_INFO_CARD_URL2: 'https://github.com/msrefs',
   HEO_INFO_CARD_ICON2: 'fab fa-github',
@@ -112,8 +112,8 @@ const CONFIG = {
 
   HEO_SOCIAL_CARD: true, // 是否显示右侧，点击加入社群按钮
   HEO_SOCIAL_CARD_TITLE_1: '交流频道',
-  HEO_SOCIAL_CARD_TITLE_2: '加入我们的社群讨论分享',
-  HEO_SOCIAL_CARD_TITLE_3: '点击加入社群',
+  HEO_SOCIAL_CARD_TITLE_2: '加入我们的QQ社群讨论分享',
+  HEO_SOCIAL_CARD_TITLE_3: '点击加入QQ社群',
   HEO_SOCIAL_CARD_URL: 'https://qm.qq.com/q/RslKrPQMoY',
 
   // *****  以下配置无效，只是预留开发 ****
