@@ -316,7 +316,7 @@ function TodayCard({ cRef, siteInfo }) {
   const link = siteConfig('HEO_HERO_TITLE_LINK', null, CONFIG)
   const { locale } = useGlobal()
   // 卡牌是否盖住下层
-  const [isCoverUp, setIsCoverUp] = useState(false)
+  const [isCoverUp, setIsCoverUp] = useState(ture)
 
   /**
    * 外部可以调用此方法
