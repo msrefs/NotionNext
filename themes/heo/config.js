@@ -10,7 +10,7 @@ const CONFIG = {
   ],
 
   // 英雄区左右侧组件颠倒位置
-  HEO_HERO_REVERSE: false,
+  HEO_HERO_REVERSE: true,
   // 博客主体区左右侧组件颠倒位置
   HEO_HERO_BODY_REVERSE: false,
 
@@ -35,9 +35,6 @@ const CONFIG = {
   // 右侧个人资料卡牌欢迎语，点击可自动切换
   HEO_INFOCARD_GREETINGS: [
     '你好！我是',
-    '专修交互与设计',
-    '数码科技爱好者',
-    '团队小组发动机'
   ],
 
   // 个人资料底部按钮
@@ -65,14 +62,6 @@ const CONFIG = {
       title_2: 'Photoshop',
       img_2: '/images/heo/2023e4058a91608ea41751c4f102b131f267075902.webp',
       color_2: '#4082c3'
-    },
-    {
-      title_1: 'FinalCutPro',
-      img_1: '/images/heo/20233e777652412247dd57fd9b48cf997c01070702.webp',
-      color_1: '#ffffff',
-      title_2: 'Python',
-      img_2: '/images/heo/20235c0731cd4c0c95fc136a8db961fdf963071502.webp',
-      color_2: '#ffffff'
     },
     {
       title_1: 'Swift',
@@ -108,7 +97,7 @@ const CONFIG = {
     }
   ],
 
-  HEO_SOCIAL_CARD: true, // 是否显示右侧，点击加入社群按钮
+  HEO_SOCIAL_CARD: false, // 是否显示右侧，点击加入社群按钮
   HEO_SOCIAL_CARD_TITLE_1: '交流频道',
   HEO_SOCIAL_CARD_TITLE_2: '加入我们的QQ社群讨论分享',
   HEO_SOCIAL_CARD_TITLE_3: '点击加入QQ社群',
