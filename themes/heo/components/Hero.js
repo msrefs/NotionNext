@@ -164,10 +164,10 @@ function TagsGroupBar() {
 function GroupMenu() {
   const url_1 = siteConfig('HEO_HERO_CATEGORY_1', {}, CONFIG)?.url || ''
   const title_1 = siteConfig('HEO_HERO_CATEGORY_1', {}, CONFIG)?.title || ''
-  //const url_2 = siteConfig('HEO_HERO_CATEGORY_2', {}, CONFIG)?.url || ''
-  //const title_2 = siteConfig('HEO_HERO_CATEGORY_2', {}, CONFIG)?.title || ''
-  const url_2 = siteConfig('HEO_HERO_CATEGORY_3', {}, CONFIG)?.url || ''
-  const title_2 = siteConfig('HEO_HERO_CATEGORY_3', {}, CONFIG)?.title || ''
+  const url_2 = siteConfig('HEO_HERO_CATEGORY_2', {}, CONFIG)?.url || ''
+  const title_2 = siteConfig('HEO_HERO_CATEGORY_2', {}, CONFIG)?.title || ''
+  const url_3 = siteConfig('HEO_HERO_CATEGORY_3', {}, CONFIG)?.url || ''
+  const title_3 = siteConfig('HEO_HERO_CATEGORY_3', {}, CONFIG)?.title || ''
 
   return (
     <div className='h-[165px] select-none xl:h-20 flex flex-col justify-between xl:space-y-0 xl:flex-row w-28 lg:w-48 xl:w-full xl:flex-nowrap xl:space-x-3'>
@@ -184,7 +184,7 @@ function GroupMenu() {
       </Link>
       <Link
         href={url_2}
-        className='group relative overflow-hidden bg-gradient-to-r from-red-500 to-yellow-500 flex h-20 justify-start items-center text-white rounded-xl xl:hover:w-1/2 xl:w-1/3 transition-all duration-500 ease-in'>
+        className='group relative overflow-hidden bg-gradient-to-r from-blue-500 to-blue-400 flex h-20 justify-start items-center text-white rounded-xl xl:hover:w-1/2 xl:w-1/3 transition-all duration-500 ease-in'>
         <div className='font-bold lg:text-lg pl-5 relative -mt-2'>
           {title_2}
           <span className='absolute -bottom-0.5 left-5 w-5 h-0.5 bg-white rounded-full'></span>
@@ -196,7 +196,7 @@ function GroupMenu() {
       {/* 第三个标签在小屏上不显示 */}
       <Link
         href={url_3}
-        className='group relative overflow-hidden bg-gradient-to-r from-teal-300 to-cyan-300 hidden h-20 xl:flex justify-start items-center text-white rounded-xl xl:hover:w-1/2 xl:w-1/3 transition-all duration-500 ease-in'>
+        className='group relative overflow-hidden bg-gradient-to-r from-blue-500 to-blue-400 hidden h-20 xl:flex justify-start items-center text-white rounded-xl xl:hover:w-1/2 xl:w-1/3 transition-all duration-500 ease-in'>
         <div className='font-bold text-lg pl-5 relative -mt-2'>
           {title_3}
           <span className='absolute -bottom-0.5 left-5 w-5 h-0.5 bg-white rounded-full'></span>
