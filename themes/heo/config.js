@@ -15,8 +15,8 @@ const CONFIG = {
   HEO_HERO_BODY_REVERSE: false,
 
   // 英雄区(首页顶部大卡)
-  HEO_HERO_TITLE_1: '欢迎访问',
-  HEO_HERO_TITLE_2: 'Neotec.',
+  HEO_HERO_TITLE_1: '欢迎访问Neotec.',
+  HEO_HERO_TITLE_2: '',
   HEO_HERO_TITLE_3: '',
   HEO_HERO_TITLE_4: '',
   HEO_HERO_TITLE_5: 'Neotec.创造无限可能',
@@ -46,7 +46,7 @@ const CONFIG = {
   HEO_INFO_CARD_TEXT3: '了解更多',
 
   // 用户技能图标
-  HEO_GROUP_ICONS: [
+  //HEO_GROUP_ICONS: [
     {
       title_1: 'AfterEffect',
       img_1: '/images/heo/20239df3f66615b532ce571eac6d14ff21cf072602.webp',
