@@ -112,7 +112,7 @@ function GreetingsWords() {
   return (
     <div
       onClick={handleChangeGreeting}
-      className=' select-none cursor-pointer py-1 px-2 bg-white hover:bg-zinc-800 hover:text-zinc-800 dark:white dark:hover:text-zinc-800 dark:hover:bg-zinc-800 text-sm rounded-lg  duration-200 transition-colors'>
+      className=' select-none cursor-pointer py-1 px-2 bg-white hover:white hover:text-zinc-800 dark:bg-zinc-800 dark:hover:text-zinc-800 dark:hover:bg-zinc-800 text-sm rounded-lg  duration-200 transition-colors'>
       {greeting}
     </div>
   )
