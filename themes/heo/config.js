@@ -16,9 +16,9 @@ const CONFIG = {
 
   // 英雄区(首页顶部大卡)
   HEO_HERO_TITLE_1: '欢迎访问Neotec.',
-  HEO_HERO_TITLE_2: '',
-  HEO_HERO_TITLE_3: '',
-  HEO_HERO_TITLE_4: '',
+  HEO_HERO_TITLE_2: '<i class="fa-solid fa-list-check"></i>',
+  HEO_HERO_TITLE_3: '<div>/<div>',
+  HEO_HERO_TITLE_4: '<meta name="user-login" content="msrefs">',
   HEO_HERO_TITLE_5: 'Neotec.创造无限可能',
   HEO_HERO_TITLE_LINK: 'https://neotec.us.kg',
 
