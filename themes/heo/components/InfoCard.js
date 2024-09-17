@@ -49,14 +49,14 @@ export function InfoCard(props) {
         <div className='flex space-x-3  hover:text-black dark:hover:text-white'>
           {/* 两个社交按钮 */}
           {url1 && (
-            <div className='w-10 text-center bg-white p-2 rounded-full  transition-colors duration-200 dark:bg-yellow-500 dark:hover:bg-black hover:bg-white'>
+            <div className='w-10 text-center bg-white p-2 rounded-full  transition-colors duration-200 dark:bg-stone-850 dark:hover:bg-black hover:bg-white'>
               <Link href={url1}>
                 <i className={icon1} />
               </Link>
             </div>
           )}
           {url2 && (
-            <div className='bg-white p-2 rounded-full w-10 items-center flex justify-center transition-colors duration-200 dark:bg-yellow-500 dark:hover:bg-black hover:bg-white'>
+            <div className='bg-white p-2 rounded-full w-10 items-center flex justify-center transition-colors duration-200 dark:bg-stone-850 dark:hover:bg-black hover:bg-white'>
               <Link href={url2}>
                 <i className={icon2} />
               </Link>
@@ -112,7 +112,7 @@ function GreetingsWords() {
   return (
     <div
       onClick={handleChangeGreeting}
-      className=' select-none cursor-pointer py-1 px-2 bg-indigo-400 hover:bg-indigo-50  hover:text-indigo-950 dark:bg-yellow-500 dark:hover:text-white dark:hover:bg-black text-sm rounded-lg  duration-200 transition-colors'>
+      className=' select-none cursor-pointer py-1 px-2 bg-white hover:bg-indigo-50  hover:text-indigo-950 dark:bg-stone-850 dark:hover:text-white dark:hover:bg-black text-sm rounded-lg  duration-200 transition-colors'>
       {greeting}
     </div>
   )
