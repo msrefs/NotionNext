@@ -84,7 +84,7 @@ function MoreButton() {
     <Link href={url3}>
       <div
         className={
-          'group bg-white dark:white hover:bg-white dark:hover:bg-zinc-800 hover:text-black dark:hover:text-white flex items-center transition-colors duration-200 py-2 px-3 rounded-full space-x-1'
+          'group bg-white dark:bg-zinc-800 hover:bg-white dark:hover:bg-zinc-800 hover:text-black dark:hover:text-white flex items-center transition-colors duration-200 py-2 px-3 rounded-full space-x-1'
         }>
         <ArrowRightCircle
           className={
@@ -112,7 +112,7 @@ function GreetingsWords() {
   return (
     <div
       onClick={handleChangeGreeting}
-      className=' select-none cursor-pointer py-1 px-2 bg-zinc-800 hover:bg-black hover:text-white dark:white dark:hover:text-white dark:hover:bg-black text-sm rounded-lg  duration-200 transition-colors'>
+      className=' select-none cursor-pointer py-1 px-2 bg-white hover:bg-zinc-800 hover:text-zinc-800 dark:white dark:hover:text-zinc-800 dark:hover:bg-zinc-800 text-sm rounded-lg  duration-200 transition-colors'>
       {greeting}
     </div>
   )
