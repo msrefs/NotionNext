@@ -18,11 +18,11 @@ const CONFIG = {
   HEO_HERO_BODY_REVERSE: false,
 
   // 英雄区(首页顶部大卡)
-  HEO_HERO_TITLE_1: '分享编程',
-  HEO_HERO_TITLE_2: '与思维认知',
+  HEO_HERO_TITLE_1: '你好！',
+  HEO_HERO_TITLE_2: '欢迎访问Neotec.',
   HEO_HERO_TITLE_3: 'NEOTEC.US.KG',
-  HEO_HERO_TITLE_4: '更新已完成',
-  HEO_HERO_TITLE_5: 'NotionNext4.0 基于Nextjs 4.0',
+  HEO_HERO_TITLE_4: '11月更新已完成',
+  HEO_HERO_TITLE_5: 'NotionNext4.0 基于Next.js 4.0',
   HEO_HERO_TITLE_LINK: 'https://github.com/msrefs/NotionNext',
   // 英雄区遮罩文字
   HEO_HERO_COVER_TITLE: 'Random Jump',
