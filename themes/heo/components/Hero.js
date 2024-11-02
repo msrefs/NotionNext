@@ -84,7 +84,7 @@ function Banner(props) {
       <div
         id='banner-title'
         className='z-10 flex flex-col absolute top-10 left-10'>
-        <div className='text-2xl font-bold mb-3  dark:text-white'>
+        <div className='text-4xl font-bold mb-3  dark:text-white'>
           {siteConfig('HEO_HERO_TITLE_1', null, CONFIG)}
           <br />
           {siteConfig('HEO_HERO_TITLE_2', null, CONFIG)}
@@ -105,7 +105,7 @@ function Banner(props) {
           'z-20 rounded-xl overflow-hidden opacity-0 group-hover:opacity-100 duration-300 transition-all bg-[#4259efdd] dark:bg-[#dca846] dark:text-white cursor-pointer absolute w-full h-full top-0 flex justify-start items-center'
         }>
         <div className='ml-12 -translate-x-32 group-hover:translate-x-0 duration-300 transition-all ease-in'>
-          <div className='text-7xl text-white font-extrabold'>{coverTitle}</div>
+          <div className='text-4xl text-white font-extrabold'>{coverTitle}</div>
           <div className='-ml-3 text-gray-300'>
             <ArrowSmallRight className={'w-24 h-24 stroke-2'} />
           </div>
