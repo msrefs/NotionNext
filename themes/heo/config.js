@@ -29,11 +29,11 @@ const CONFIG = {
 
   // 英雄区显示三个置顶分类
   HEO_HERO_CATEGORY_1: { title: 'Basic', url: '/tag/Basic' },
-  HEO_HERO_CATEGORY_2: { title: 'Popular', url: '/tag/Popular' },
+  HEO_HERO_CATEGORY_2: { title: 'Popular', url: '/tag/Recommend' },
   HEO_HERO_CATEGORY_3: { title: 'Tutorials', url: '/tag/Tutorials' },
 
   // 英雄区右侧推荐文章标签, 例如 [推荐] , 最多六篇文章; 若留空白''，则推荐最近更新文章
-  HEO_HERO_RECOMMEND_POST_TAG: '推荐',
+  HEO_HERO_RECOMMEND_POST_TAG: 'Recommend',
   HEO_HERO_RECOMMEND_POST_SORT_BY_UPDATE_TIME: false, // 推荐文章排序，为`true`时将强制按最后修改时间倒序
   //   HERO_RECOMMEND_COVER: 'https://cdn.pixabay.com/photo/2015/10/30/20/13/sunrise-1014712_1280.jpg', // 英雄区右侧图片
 
