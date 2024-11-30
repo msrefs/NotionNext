@@ -4,7 +4,7 @@ const CONFIG = {
 
   HEO_HOME_BANNER_ENABLE: true,
 
-  HEO_SITE_CREATE_TIME: '2021-09-21', // 建站日期，用于计算网站运行的第几天
+  HEO_SITE_CREATE_TIME: '2024-08-07', // 建站日期，用于计算网站运行的第几天
 
   // 首页顶部通知条滚动内容，如不需要可以留空 []
   HEO_NOTICE_BAR: [
@@ -22,7 +22,7 @@ const CONFIG = {
   HEO_HERO_TITLE_2: '欢迎访问Neotec.',
   HEO_HERO_TITLE_3: 'NEOTEC.US.KG',
   HEO_HERO_TITLE_4: '11月更新已完成',
-  HEO_HERO_TITLE_5: 'NotionNext4.0 基于Next.js 4.0',
+  HEO_HERO_TITLE_5: 'NotionNext4.0 基于Next.js',
   HEO_HERO_TITLE_LINK: 'https://github.com/msrefs/NotionNext',
   // 英雄区遮罩文字
   HEO_HERO_COVER_TITLE: 'Random Jump',
@@ -39,21 +39,16 @@ const CONFIG = {
 
   // 右侧个人资料卡牌欢迎语，点击可自动切换
   HEO_INFOCARD_GREETINGS: [
-    '你好！我是',
-    '分享与热心帮助',
-    '专修交互与设计',
-    '脚踏实地行动派',
-    '数码科技爱好者',
-    '团队小组发动机'
+    '欢迎访问'
   ],
 
   // 个人资料底部按钮
-  HEO_INFO_CARD_URL1: '/about',
-  HEO_INFO_CARD_ICON1: 'fas fa-user',
-  HEO_INFO_CARD_URL2: 'https://neotec.us.kg/about/',
-  HEO_INFO_CARD_ICON2: 'fab fa-github',
-  HEO_INFO_CARD_URL3: 'https://github.com/msrefs/',
-  HEO_INFO_CARD_TEXT3: '了解更多',
+  HEO_INFO_CARD_URL1: '/member',
+  HEO_INFO_CARD_ICON1: 'fas fa-user-group',
+  HEO_INFO_CARD_URL2: '/designcomplex',
+  HEO_INFO_CARD_ICON2: 'fas fa-compass-drafting',
+  HEO_INFO_CARD_URL3: '/joinus',
+  HEO_INFO_CARD_TEXT3: '加入我们',
 
   // 用户技能图标
   HEO_GROUP_ICONS: [
