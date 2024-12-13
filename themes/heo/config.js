@@ -8,8 +8,8 @@ const CONFIG = {
 
   // 首页顶部通知条滚动内容，如不需要可以留空 []
   HEO_NOTICE_BAR: [
-    { title: '欢迎来到Neotec.', url: '/about' },
-    { title: 'Neotec创造无限可能', url: '/about' }
+    { title: '欢迎来到Neotec.', url: '' },
+    { title: 'Neotec创造无限可能', url: '' }
   ],
 
   // 英雄区左右侧组件颠倒位置
@@ -48,7 +48,7 @@ const CONFIG = {
   HEO_INFO_CARD_URL2: '/javalibrary',
   HEO_INFO_CARD_ICON2: 'fas fa-book',
   HEO_INFO_CARD_URL3: '/DesignComplex',
-  HEO_INFO_CARD_TEXT3: 'Design Complex',
+  HEO_INFO_CARD_TEXT3: 'DesignComplex',
 
   // 用户技能图标
   HEO_GROUP_ICONS: [
