@@ -45,10 +45,10 @@ const CONFIG = {
   // 个人资料底部按钮
   HEO_INFO_CARD_URL1: '/about',
   HEO_INFO_CARD_ICON1: 'fas fa-circle-info',
-  HEO_INFO_CARD_URL2: '/javalibrary',
-  HEO_INFO_CARD_ICON2: 'fas fa-book',
-  HEO_INFO_CARD_URL3: '/DesignComplex',
-  HEO_INFO_CARD_TEXT3: 'DesignComplex',
+  HEO_INFO_CARD_URL2: '/DesignComplex',
+  HEO_INFO_CARD_ICON2: 'fas fa-compass-drafting',
+  HEO_INFO_CARD_URL3: '/joinus',
+  HEO_INFO_CARD_TEXT3: '加入我们',
 
   // 用户技能图标
   HEO_GROUP_ICONS: [
