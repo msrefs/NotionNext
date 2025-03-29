@@ -13,7 +13,7 @@ export default function BeiAnSite() {
   return (
     <span>
       <i className='fas fa-shield-alt' />
-      <a href="https://icp.gov.moe/?keyword=20250178" className='mx-1'>
+      <a href={beianLink} className='mx-1'>
         {beian}
       </a>
       <br />
