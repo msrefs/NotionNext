@@ -29,7 +29,7 @@ const CONFIG = {
 
   // 英雄区显示三个置顶分类
   HEO_HERO_CATEGORY_1: { title: 'Basic', url: '/tag/Basic' },
-  HEO_HERO_CATEGORY_2: { title: 'Recommend', url: '/tag/Recommend' },
+  HEO_HERO_CATEGORY_2: { title: 'Referral', url: '/tag/Recommend' },
   HEO_HERO_CATEGORY_3: { title: 'Tutorials', url: '/tag/Tutorials' },
 
   // 英雄区右侧推荐文章标签, 例如 [推荐] , 最多六篇文章; 若留空白''，则推荐最近更新文章
