@@ -9,7 +9,7 @@ import SocialButton from './SocialButton'
  */
 const Footer = () => {
   const BEI_AN = siteConfig('BEI_AN')
-  const beianlink = siteconfig('BEI_AN_LINK')
+  const beianLink = siteConfig('BEI_AN_LINK')
   const BIO = siteConfig('BIO')
   return (
     <footer className='relative flex-shrink-0 bg-white dark:bg-[#1a191d] justify-center text-center m-auto w-full leading-6  text-gray-600 dark:text-gray-100 text-sm'>
@@ -47,7 +47,7 @@ const Footer = () => {
           {BEI_AN && (
             <>
               <i className='fas fa-shield-alt' />{' '}
-              <a href={beianlink} className='mr-2'>
+              <a href={beianLink} className='mr-2'>
                 {siteConfig('BEI_AN')}
               </a>
             </>
