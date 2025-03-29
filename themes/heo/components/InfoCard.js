@@ -29,7 +29,6 @@ export function InfoCard(props) {
         {/* 问候语 */}
         <GreetingsWords />
         {/* 头像 */}
-      </div>
         <div
           className={`${isSlugPage ? 'absolute right-0 -mt-8 -mr-6 hover:opacity-0 hover:scale-150 blur' : 'cursor-pointer'} justify-center items-center flex dark:text-gray-100 transform transitaion-all duration-200`}>
           <LazyImage
@@ -39,6 +38,8 @@ export function InfoCard(props) {
             alt={siteConfig('AUTHOR')}
           />
         </div>
+      </div>
+
       <h2 className='text-3xl font-extrabold mt-3'>{siteConfig('AUTHOR')}</h2>
 
       {/* 公告栏 */}
