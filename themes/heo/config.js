@@ -22,7 +22,7 @@ const CONFIG = {
   HEO_HERO_TITLE_2: '欢迎访问Neotec.',
   HEO_HERO_TITLE_3: 'WWW.NEOTEC.UK',
   HEO_HERO_TITLE_4: '4月修复已完成',
-  HEO_HERO_TITLE_5: '该网站基于Nextjs开发',
+  HEO_HERO_TITLE_5: '该网站基于Next.js开发',
   HEO_HERO_TITLE_LINK: '',
   // 英雄区遮罩文字
   HEO_HERO_COVER_TITLE: 'RANDOM JUMP',
