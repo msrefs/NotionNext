@@ -11,7 +11,7 @@ export default function PoweredBy(props) {
       <a
         href='https://nextjs.org/'
         className='underline justify-start'>
-        Nextjs 11.4.5
+        Next.js 11.4.5
       </a>
       .
     </div>
