@@ -70,3 +70,50 @@ export function InfoCard(props) {
 }
 
 // ... MoreButton 和 GreetingsWords 组件保持不变 ...
+/**
+ * 了解更多按鈕
+ * @returns
+ */
+function MoreButton() {
+  const url3 = siteConfig('HEO_INFO_CARD_URL3', null, CONFIG)
+  const text3 = siteConfig('HEO_INFO_CARD_TEXT3', null, CONFIG)
+  if (!url3) {
+    return <></>
+  }
+  return (
+    <Link href={url3}>
+      <div
+        className={
+          'group bg-indigo-400 hover:bg-white text-white hover:text-[#4f65f0] flex items-center transition-colors duration-200 py-2 px-3 rounded-full space-x-1'
+        }>
+        <ArrowRightCircle
+          className={
+            'group-hover:stroke-[#4f65f0] w-6 h-6 transition-all duration-100'
+          }
+        />
+        <div className='font-bold'>{text3}</div>
+      </div>
+    </Link>
+  )
+}
+
+/**
+ * 欢迎语
+ */
+function GreetingsWords() {
+  const greetings = siteConfig('HEO_INFOCARD_GREETINGS', null, CONFIG)
+  const [greeting, setGreeting] = useState(greetings[0])
+  // 每次点击，随机获取greetings中的一个
+  const handleChangeGreeting = () => {
+    const randomIndex = Math.floor(Math.random() * greetings.length)
+    setGreeting(greetings[randomIndex])
+  }
+
+  return (
+    <div
+      onClick={handleChangeGreeting}
+      className='select-none cursor-pointer py-1 px-2 bg-indigo-400 hover:bg-white hover:text-[#4f65f0] text-sm rounded-lg duration-200 transition-colors'>
+      {greeting}
+    </div>
+  )
+}
