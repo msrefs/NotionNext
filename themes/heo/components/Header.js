@@ -19,17 +19,11 @@ import SlideOver from './SlideOver'
 const Header = props => {
   const [fixedNav, setFixedNav] = useState(false)
   const [textWhite, setTextWhite] = useState(false)
-  const [navBgWhite, setBgWhite] = useState(true) // 默认白色背景
+  const [navBgWhite, setBgWhite] = useState(false)
   const [activeIndex, setActiveIndex] = useState(0)
-  const [isPostPage, setIsPostPage] = useState(false)
 
   const router = useRouter()
   const slideOverRef = useRef()
-
-  useEffect(() => {
-    // 初始化时检查是否是文章页
-    setIsPostPage(!!document?.querySelector('#post-bg'))
-  }, [])
 
   const toggleMenuOpen = () => {
     slideOverRef?.current?.toggleSlideOvers()
@@ -41,21 +35,22 @@ const Header = props => {
   const scrollTrigger = useCallback(
     throttle(() => {
       const scrollS = window.scrollY
-      const isDarkMode = !JSON.parse(siteConfig('THEME_SWITCH'))
-      
-      // 始终显示背景（白色或深色）
-      setBgWhite(true)
-      
+      // 导航栏设置 白色背景
       if (scrollS <= 1) {
         setFixedNav(false)
-        
-        // 文章页特殊处理：只在深色背景图时才使用白色文字
-        if (isPostPage) {
-          setTextWhite(isDarkMode) // 仅当深色模式时使用白色文字
+        setBgWhite(false)
+        setTextWhite(false)
+
+        // 文章详情页特殊处理
+        if (document?.querySelector('#post-bg')) {
+          setFixedNav(true)
+          setTextWhite(true)
         }
       } else {
+        // 向下滚动后的导航样式
         setFixedNav(true)
-        setTextWhite(false) // 滚动后一律不使用白色文字
+        setTextWhite(false)
+        setBgWhite(true)
       }
     }, 100)
   )
@@ -138,7 +133,7 @@ const Header = props => {
       `}</style>
 
       {/* fixed时留白高度 */}
-      {fixedNav && !isPostPage && (
+      {fixedNav && !document?.querySelector('#post-bg') && (
         <div className='h-16'></div>
       )}
 
@@ -146,9 +141,9 @@ const Header = props => {
       <nav
         id='nav'
         className={`z-20 h-16 top-0 w-full duration-300 transition-all
-            ${fixedNav ? 'fixed' : 'relative'} 
-            ${textWhite ? 'text-white' : 'text-black dark:text-white'}  
-            ${navBgWhite ? 'bg-white dark:bg-[#18171d]' : 'bg-transparent'}`}>
+            ${fixedNav ? 'fixed' : 'relative bg-transparent'} 
+            ${textWhite ? 'text-white ' : 'text-black dark:text-white'}  
+            ${navBgWhite ? 'bg-white dark:bg-[#18171d] shadow' : 'bg-transparent'}`}>
         <div className='flex h-full mx-auto justify-between items-center max-w-[86rem] px-6'>
           {/* 左侧logo */}
           <Logo {...props} />
