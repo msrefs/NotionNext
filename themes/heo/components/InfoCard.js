@@ -23,7 +23,7 @@ export function InfoCard(props) {
   const url2 = siteConfig('HEO_INFO_CARD_URL2', null, CONFIG)
   const icon2 = siteConfig('HEO_INFO_CARD_ICON2', null, CONFIG)
   return (
-    <Card className='wow fadeInUp bg-[#4f65f0] dark:bg-yellow-600 text-white flex flex-col w-72 overflow-hidden relative'>
+    <Card className='wow fadeInUp bg-white dark:bg-[#1E1E1E] text-black dark:text-white flex flex-col w-72 overflow-hidden relative border border-[#E5E7EB] dark:border-[#374151] hover:border-[#4F65F0] dark:hover:border-[#CA8A04] transition-colors duration-300'>
       {/* 信息卡牌第一行 */}
       <div className='flex justify-between'>
         {/* 问候语 */}
@@ -43,20 +43,20 @@ export function InfoCard(props) {
       <h2 className='text-3xl font-extrabold mt-3'>{siteConfig('AUTHOR')}</h2>
 
       {/* 公告栏 */}
-      <Announcement post={notice} style={{ color: 'white !important' }} />
+      <Announcement post={notice} style={{ color: 'inherit !important' }} />
 
       <div className='flex justify-between'>
-        <div className='flex space-x-3  hover:text-black dark:hover:text-white'>
+        <div className='flex space-x-3'>
           {/* 两个社交按钮 */}
           {url1 && (
-            <div className='w-10 text-center bg-indigo-400 p-2 rounded-full  transition-colors duration-200 dark:bg-yellow-500 dark:hover:bg-black hover:bg-white'>
+            <div className='w-10 text-center bg-[#E5E7EB] dark:bg-[#374151] p-2 rounded-full transition-colors duration-200 hover:bg-[#4F65F0] dark:hover:bg-[#CA8A04] hover:text-white'>
               <Link href={url1}>
                 <i className={icon1} />
               </Link>
             </div>
           )}
           {url2 && (
-            <div className='bg-indigo-400 p-2 rounded-full w-10 items-center flex justify-center transition-colors duration-200 dark:bg-yellow-500 dark:hover:bg-black hover:bg-white'>
+            <div className='bg-[#E5E7EB] dark:bg-[#374151] p-2 rounded-full w-10 items-center flex justify-center transition-colors duration-200 hover:bg-[#4F65F0] dark:hover:bg-[#CA8A04] hover:text-white'>
               <Link href={url2}>
                 <i className={icon2} />
               </Link>
@@ -84,11 +84,11 @@ function MoreButton() {
     <Link href={url3}>
       <div
         className={
-          'group bg-indigo-400 dark:bg-yellow-500 hover:bg-white dark:hover:bg-black hover:text-black dark:hover:text-white flex items-center transition-colors duration-200 py-2 px-3 rounded-full space-x-1'
+          'group bg-[#E5E7EB] dark:bg-[#374151] hover:bg-[#4F65F0] dark:hover:bg-[#CA8A04] text-black dark:text-white hover:text-white flex items-center transition-colors duration-200 py-2 px-3 rounded-full space-x-1'
         }>
         <ArrowRightCircle
           className={
-            'group-hover:stroke-black dark:group-hover:stroke-white w-6 h-6 transition-all duration-100'
+            'group-hover:stroke-white w-6 h-6 transition-all duration-100'
           }
         />
         <div className='font-bold'>{text3}</div>
@@ -112,7 +112,7 @@ function GreetingsWords() {
   return (
     <div
       onClick={handleChangeGreeting}
-      className=' select-none cursor-pointer py-1 px-2 bg-indigo-400 hover:bg-indigo-50  hover:text-indigo-950 dark:bg-yellow-500 dark:hover:text-white dark:hover:bg-black text-sm rounded-lg  duration-200 transition-colors'>
+      className='select-none cursor-pointer py-1 px-2 bg-[#E5E7EB] hover:bg-[#4F65F0] dark:bg-[#374151] dark:hover:bg-[#CA8A04] text-black dark:text-white hover:text-white text-sm rounded-lg duration-200 transition-colors'>
       {greeting}
     </div>
   )
