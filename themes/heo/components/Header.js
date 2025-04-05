@@ -21,9 +21,15 @@ const Header = props => {
   const [textWhite, setTextWhite] = useState(false)
   const [navBgWhite, setBgWhite] = useState(true) // 默认白色背景
   const [activeIndex, setActiveIndex] = useState(0)
+  const [isPostPage, setIsPostPage] = useState(false)
 
   const router = useRouter()
   const slideOverRef = useRef()
+
+  useEffect(() => {
+    // 初始化时检查是否是文章页
+    setIsPostPage(!!document?.querySelector('#post-bg'))
+  }, [])
 
   const toggleMenuOpen = () => {
     slideOverRef?.current?.toggleSlideOvers()
@@ -35,7 +41,6 @@ const Header = props => {
   const scrollTrigger = useCallback(
     throttle(() => {
       const scrollS = window.scrollY
-      const isPostPage = document?.querySelector('#post-bg')
       const isDarkMode = !JSON.parse(siteConfig('THEME_SWITCH'))
       
       // 始终显示背景（白色或深色）
@@ -44,18 +49,13 @@ const Header = props => {
       if (scrollS <= 1) {
         setFixedNav(false)
         
-        // 文章页特殊处理：只在深色模式或需要白色文字时才设置
+        // 文章页特殊处理：只在深色背景图时才使用白色文字
         if (isPostPage) {
-          setTextWhite(isDarkMode || scrollS > 50) // 添加滚动阈值判断
-        } else {
-          setTextWhite(false)
+          setTextWhite(isDarkMode) // 仅当深色模式时使用白色文字
         }
       } else {
         setFixedNav(true)
-        // 非文章页或滚动超过阈值时取消白色文字
-        if (!isPostPage || scrollS > 50) {
-          setTextWhite(false)
-        }
+        setTextWhite(false) // 滚动后一律不使用白色文字
       }
     }, 100)
   )
@@ -138,7 +138,7 @@ const Header = props => {
       `}</style>
 
       {/* fixed时留白高度 */}
-      {fixedNav && !document?.querySelector('#post-bg') && (
+      {fixedNav && !isPostPage && (
         <div className='h-16'></div>
       )}
 
@@ -148,8 +148,7 @@ const Header = props => {
         className={`z-20 h-16 top-0 w-full duration-300 transition-all
             ${fixedNav ? 'fixed' : 'relative'} 
             ${textWhite ? 'text-white' : 'text-black dark:text-white'}  
-            ${navBgWhite ? 'bg-white dark:bg-[#18171d]' : 'bg-transparent'}
-            ${textWhite ? 'bg-opacity-0 dark:bg-opacity-0' : 'bg-opacity-100 dark:bg-opacity-100'}`}>
+            ${navBgWhite ? 'bg-white dark:bg-[#18171d]' : 'bg-transparent'}`}>
         <div className='flex h-full mx-auto justify-between items-center max-w-[86rem] px-6'>
           {/* 左侧logo */}
           <Logo {...props} />
