@@ -298,3 +298,30 @@ img {
 .adsbygoogle {
   overflow: hidden;
 }
+
+/* 移除所有可能的伪元素白杠 */
+body::after, 
+footer::after, 
+html::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* 确保根元素和页脚背景色全覆盖 */
+html, body {
+  background-color: #f1f3f7; /* 浅色模式背景色 */
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.dark html, 
+.dark body {
+  background-color: #1a191d; /* 深色模式背景色 */
+}
+
+/* 强制页脚与父容器无缝衔接 */
+footer {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
