@@ -29,7 +29,7 @@ const Footer = () => {
       {/* 底部页面信息 */}
       <div
         id='footer-bottom'
-        className='w-full h-20 flex flex-col p-3 lg:flex-row justify-between px-6 items-center bg-[#f1f3f7] dark:bg-night border-t border-[#f1f3f7] dark:border-transparent'>
+        className='w-full h-21 flex flex-col p-3 lg:flex-row justify-between px-6 items-center bg-[#f1f3f7] dark:bg-night border-t border-[#f1f3f7] dark:border-transparent'>
         <div id='footer-bottom-left' className='text-center lg:text-start'>
           <PoweredBy />
           <div className='flex gap-x-1'>
