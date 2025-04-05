@@ -23,14 +23,14 @@ export function InfoCard(props) {
   const url2 = siteConfig('HEO_INFO_CARD_URL2', null, CONFIG)
   const icon2 = siteConfig('HEO_INFO_CARD_ICON2', null, CONFIG)
   return (
-    <Card className='wow fadeInUp bg-white dark:bg-[#1E1E1E] text-black dark:text-white flex flex-col w-72 overflow-hidden relative border border-[#E5E7EB] dark:border-[#374151] hover:border-[#4F65F0] dark:hover:border-[#CA8A04] transition-colors duration-300'>
+    <Card className='wow fadeInUp bg-[#4f65f0] text-white flex flex-col w-72 overflow-hidden relative border border-[#E5E7EB] hover:border-[#4F65F0] transition-colors duration-300'>
       {/* 信息卡牌第一行 */}
       <div className='flex justify-between'>
         {/* 问候语 */}
         <GreetingsWords />
         {/* 头像 */}
         <div
-          className={`${isSlugPage ? 'absolute right-0 -mt-8 -mr-6 hover:opacity-0 hover:scale-150 blur' : 'cursor-pointer'} justify-center items-center flex dark:text-gray-100 transform transitaion-all duration-200`}>
+          className={`${isSlugPage ? 'absolute right-0 -mt-8 -mr-6 hover:opacity-0 hover:scale-150 blur' : 'cursor-pointer'} justify-center items-center flex transform transitaion-all duration-200`}>
           <LazyImage
             src={siteInfo?.icon}
             className='rounded-full'
@@ -43,20 +43,20 @@ export function InfoCard(props) {
       <h2 className='text-3xl font-extrabold mt-3'>{siteConfig('AUTHOR')}</h2>
 
       {/* 公告栏 */}
-      <Announcement post={notice} style={{ color: 'inherit !important' }} />
+      <Announcement post={notice} style={{ color: 'white !important' }} />
 
       <div className='flex justify-between'>
         <div className='flex space-x-3'>
           {/* 两个社交按钮 */}
           {url1 && (
-            <div className='w-10 text-center bg-[#E5E7EB] dark:bg-[#374151] p-2 rounded-full transition-colors duration-200 hover:bg-[#4F65F0] dark:hover:bg-[#CA8A04] hover:text-white'>
+            <div className='w-10 text-center bg-indigo-400 p-2 rounded-full transition-colors duration-200 hover:bg-white hover:text-[#4f65f0]'>
               <Link href={url1}>
                 <i className={icon1} />
               </Link>
             </div>
           )}
           {url2 && (
-            <div className='bg-[#E5E7EB] dark:bg-[#374151] p-2 rounded-full w-10 items-center flex justify-center transition-colors duration-200 hover:bg-[#4F65F0] dark:hover:bg-[#CA8A04] hover:text-white'>
+            <div className='bg-indigo-400 p-2 rounded-full w-10 items-center flex justify-center transition-colors duration-200 hover:bg-white hover:text-[#4f65f0]'>
               <Link href={url2}>
                 <i className={icon2} />
               </Link>
@@ -84,11 +84,11 @@ function MoreButton() {
     <Link href={url3}>
       <div
         className={
-          'group bg-[#E5E7EB] dark:bg-[#374151] hover:bg-[#4F65F0] dark:hover:bg-[#CA8A04] text-black dark:text-white hover:text-white flex items-center transition-colors duration-200 py-2 px-3 rounded-full space-x-1'
+          'group bg-indigo-400 hover:bg-white text-white hover:text-[#4f65f0] flex items-center transition-colors duration-200 py-2 px-3 rounded-full space-x-1'
         }>
         <ArrowRightCircle
           className={
-            'group-hover:stroke-white w-6 h-6 transition-all duration-100'
+            'group-hover:stroke-[#4f65f0] w-6 h-6 transition-all duration-100'
           }
         />
         <div className='font-bold'>{text3}</div>
@@ -112,7 +112,7 @@ function GreetingsWords() {
   return (
     <div
       onClick={handleChangeGreeting}
-      className='select-none cursor-pointer py-1 px-2 bg-[#E5E7EB] hover:bg-[#4F65F0] dark:bg-[#374151] dark:hover:bg-[#CA8A04] text-black dark:text-white hover:text-white text-sm rounded-lg duration-200 transition-colors'>
+      className='select-none cursor-pointer py-1 px-2 bg-indigo-400 hover:bg-white hover:text-[#4f65f0] text-sm rounded-lg duration-200 transition-colors'>
       {greeting}
     </div>
   )
