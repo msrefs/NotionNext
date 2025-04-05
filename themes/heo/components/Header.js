@@ -19,7 +19,7 @@ import SlideOver from './SlideOver'
 const Header = props => {
   const [fixedNav, setFixedNav] = useState(false)
   const [textWhite, setTextWhite] = useState(false)
-  const [navBgWhite, setBgWhite] = useState(false)
+  const [navBgWhite, setBgWhite] = useState(true) // 修改初始状态为true
   const [activeIndex, setActiveIndex] = useState(0)
 
   const router = useRouter()
@@ -38,7 +38,7 @@ const Header = props => {
       // 导航栏设置 白色背景
       if (scrollS <= 1) {
         setFixedNav(false)
-        setBgWhite(false)
+        setBgWhite(true) // 修改为true，保持白色背景
         setTextWhite(false)
 
         // 文章详情页特殊处理
