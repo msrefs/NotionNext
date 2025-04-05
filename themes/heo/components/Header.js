@@ -36,23 +36,26 @@ const Header = props => {
     throttle(() => {
       const scrollS = window.scrollY
       const isPostPage = document?.querySelector('#post-bg')
+      const isDarkMode = !JSON.parse(siteConfig('THEME_SWITCH'))
       
-      // 导航栏设置
+      // 始终显示背景（白色或深色）
+      setBgWhite(true)
+      
       if (scrollS <= 1) {
         setFixedNav(false)
-        setBgWhite(true) // 始终保持白色背景
         
-        // 只在有背景图的文章页且非浅色模式下显示白色文字
-        if (isPostPage && !JSON.parse(siteConfig('THEME_SWITCH'))) {
-          setTextWhite(true)
+        // 文章页特殊处理：只在深色模式或需要白色文字时才设置
+        if (isPostPage) {
+          setTextWhite(isDarkMode || scrollS > 50) // 添加滚动阈值判断
         } else {
           setTextWhite(false)
         }
       } else {
-        // 向下滚动后的导航样式
         setFixedNav(true)
-        setTextWhite(false)
-        setBgWhite(true)
+        // 非文章页或滚动超过阈值时取消白色文字
+        if (!isPostPage || scrollS > 50) {
+          setTextWhite(false)
+        }
       }
     }, 100)
   )
@@ -145,7 +148,8 @@ const Header = props => {
         className={`z-20 h-16 top-0 w-full duration-300 transition-all
             ${fixedNav ? 'fixed' : 'relative'} 
             ${textWhite ? 'text-white' : 'text-black dark:text-white'}  
-            ${navBgWhite ? 'bg-white dark:bg-[#18171d]' : 'bg-transparent'}`}>  {/* 移除了shadow类 */}
+            ${navBgWhite ? 'bg-white dark:bg-[#18171d]' : 'bg-transparent'}
+            ${textWhite ? 'bg-opacity-0 dark:bg-opacity-0' : 'bg-opacity-100 dark:bg-opacity-100'}`}>
         <div className='flex h-full mx-auto justify-between items-center max-w-[86rem] px-6'>
           {/* 左侧logo */}
           <Logo {...props} />
