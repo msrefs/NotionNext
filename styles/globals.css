@@ -6,6 +6,18 @@ html {
   overflow-x: hidden;
 }
 
+#footer-bottom {
+  border-top: 1px solid #f1f3f7 !important;
+}
+
+#color-transition {
+  background: linear-gradient(to bottom, #f7f9fe, #ffffff) !important;
+}
+
+.dark #color-transition {
+  background: linear-gradient(to bottom, #1a191d, #1a191d) !important;
+}
+
 .wrapper {
   min-height: 100vh;
   display: flex;
