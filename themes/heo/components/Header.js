@@ -19,7 +19,7 @@ import SlideOver from './SlideOver'
 const Header = props => {
   const [fixedNav, setFixedNav] = useState(false)
   const [textWhite, setTextWhite] = useState(false)
-  const [navBgWhite, setBgWhite] = useState(true) // 修改初始状态为true
+  const [navBgWhite, setBgWhite] = useState(true) // 默认白色背景
   const [activeIndex, setActiveIndex] = useState(0)
 
   const router = useRouter()
@@ -35,16 +35,18 @@ const Header = props => {
   const scrollTrigger = useCallback(
     throttle(() => {
       const scrollS = window.scrollY
-      // 导航栏设置 白色背景
+      const isPostPage = document?.querySelector('#post-bg')
+      
+      // 导航栏设置
       if (scrollS <= 1) {
         setFixedNav(false)
-        setBgWhite(true) // 修改为true，保持白色背景
-        setTextWhite(false)
-
-        // 文章详情页特殊处理
-        if (document?.querySelector('#post-bg')) {
-          setFixedNav(true)
+        setBgWhite(true) // 始终保持白色背景
+        
+        // 只在有背景图的文章页且非浅色模式下显示白色文字
+        if (isPostPage && !JSON.parse(siteConfig('THEME_SWITCH'))) {
           setTextWhite(true)
+        } else {
+          setTextWhite(false)
         }
       } else {
         // 向下滚动后的导航样式
@@ -141,9 +143,9 @@ const Header = props => {
       <nav
         id='nav'
         className={`z-20 h-16 top-0 w-full duration-300 transition-all
-            ${fixedNav ? 'fixed' : 'relative bg-transparent'} 
-            ${textWhite ? 'text-white ' : 'text-black dark:text-white'}  
-            ${navBgWhite ? 'bg-white dark:bg-[#18171d] shadow' : 'bg-transparent'}`}>
+            ${fixedNav ? 'fixed' : 'relative'} 
+            ${textWhite ? 'text-white' : 'text-black dark:text-white'}  
+            ${navBgWhite ? 'bg-white dark:bg-[#18171d]' : 'bg-transparent'}`}>  {/* 移除了shadow类 */}
         <div className='flex h-full mx-auto justify-between items-center max-w-[86rem] px-6'>
           {/* 左侧logo */}
           <Logo {...props} />
